@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "FactoryCorrectionInheritance/1.0.0": {
+        "runtime": {
+          "FactoryCorrectionInheritance.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FactoryCorrectionInheritance/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
