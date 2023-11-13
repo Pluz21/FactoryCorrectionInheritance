@@ -25,6 +25,13 @@ namespace FactoryCorrectionInheritance
             Color = _color;
         }
 
+        public Airplane(AirplaneFactory.TempPlaneModel _model)                          // ABLE TO ACCESS WITH NAME SPACE
+        {
+            Color = _model.Color;
+            Engines = _model.Engines;
+            Passengers = _model.Passengers;
+        }
+
         public override void StartEngine() => Console.WriteLine("Start Airplane engine");
     
         public override void StopEngine() => Console.WriteLine("Stop Airplane engine");
@@ -34,11 +41,15 @@ namespace FactoryCorrectionInheritance
 
             Console.WriteLine("Taking off");
         }
-        public virtual void Land()
-        {
-            Console.WriteLine("Land");
+        public virtual void Land() => Console.WriteLine("Landing");
 
+        //public override string ToString() => $"New {Color} Plane with {Engines} engine(s) and it can take {Passengers} passengers has been produced";
+        // BASE FUNCTION CSHARP TO CONVERT TO STRING SHORTER VERSION
+        public override string ToString()                           // RETURN TYPE STRING TO -  NEEDS A RETURN
+        {
+            return $"New {Color} Plane with {Engines} engine(s) and it can take {Passengers} passengers has been produced";
         }
+
 
     }
 }
