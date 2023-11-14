@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -82,8 +83,11 @@ public abstract class Factory
             }
             _result = _result < 1 ? 1 : _result > _length ? _length : _result;               // Clamping our _result to lower and higher 
             VehicleColor _selection = (VehicleColor)(_result-1);                            //Syntax to cast to VehicleColor, -1 because we started from 1 in choices
-            OnColorSelected?.Invoke(_selection);                                           // _selection is the choice of user, so we cast the choice to
-                                                                                          // our Enum. So now we have the color selection in our Enum
+                                                                                            // _selection is the choice of user, so we cast the choice to
+                                                                                            // our Enum. So now we have the color selection in our Enum
+
+
+            OnColorSelected?.Invoke(_selection);      
 
             #endregion Methods
 
