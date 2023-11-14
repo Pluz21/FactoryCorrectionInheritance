@@ -102,6 +102,23 @@ public abstract class Factory
             }
             OnVehicleStockDisplayed?.Invoke();
         }
+        protected void SelectSettings(string _label, int _selectionMin, int _selectionMax, string _endMessage, Action<int> _callback)   //FUNCTION TO SELECT SETTINGS OF FACTORY PRODUCTION
+        { 
+            Console.WriteLine(_label);
+            string _input = Console.ReadLine();
+            bool _validInput = int.TryParse(_input, out int _result);
+            if (!_validInput)
+            {
+                SelectSettings(_label, _selectionMin, _selectionMax, _endMessage, _callback);
+                return;
+            }
+            _result = _result < _selectionMin ? _selectionMin : _result > _selectionMax ? _selectionMax : _result;
+            Console.WriteLine($"{_endMessage} [{_result}]");
+
+            _callback?.Invoke(_result);
+
+        
+        }
     }   
 }
 

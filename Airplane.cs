@@ -47,7 +47,7 @@ namespace FactoryCorrectionInheritance
         // BASE FUNCTION CSHARP TO CONVERT TO STRING SHORTER VERSION
         public override string ToString()                           // RETURN TYPE STRING TO -  NEEDS A RETURN
         {
-            return $"New {Color} Plane with {Engines} engine(s) and it can take {Passengers} passengers has been produced";
+            return $"You have just produced a {Color} Plane. It has {Engines} engine(s) and it has a capacity of {Passengers} passengers.";
         }
 
 

@@ -30,9 +30,22 @@ namespace FactoryCorrectionInheritance
             OnStartProduction += SelectColor;
             OnColorSelected += (color) => 
             {
-                templatePlane.Color = color; 
-                templatePlane.Engines = 1;
-                templatePlane.Passengers = 1;
+                templatePlane.Color = color;
+                SelectSettings
+                 (
+                    $"Select the number of engines : [{Airplane.MIN_ENGINES} - {Airplane.MAX_ENGINES}]",
+                    Airplane.MIN_ENGINES, Airplane.MAX_ENGINES,
+                    "Number of engines", (engines) => templatePlane.Engines = engines
+
+                 );
+                SelectSettings
+                (
+                    $"Select the number of passengers : [{Airplane.MIN_PASSENGERS} - {Airplane.MAX_PASSENGERS}]",
+                    Airplane.MIN_PASSENGERS, Airplane.MAX_PASSENGERS,
+                    "Number of engines", (passengers) => templatePlane.Passengers = passengers
+
+                 );
+                
             };
 
             templatePlane.Color = new VehicleColor();
