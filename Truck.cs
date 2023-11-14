@@ -4,8 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
+namespace FactoryCorrectionInheritance
+{
 public class Truck
     {
     }
+}
+
 

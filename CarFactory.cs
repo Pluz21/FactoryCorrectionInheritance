@@ -5,9 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace FactoryCorrectionInheritance
-{ 
-public class Boat
+{
+    public class CarFactory
     {
+        #region Constructor
+        public CarFactory() 
+        { 
+        
+        }
     }
+        #endregion Constructor
 }
-

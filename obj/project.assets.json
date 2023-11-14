@@ -8,24 +8,31 @@
     "net7.0": []
   },
   "packageFolders": {
-    "/Users/Tim/.nuget/packages/": {}
+    "C:\\Users\\timmo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Tim/Documents/GitHub/FactoryCorrectionInheritance/FactoryCorrectionInheritance.csproj",
+      "projectUniqueName": "C:\\Users\\timmo\\Desktop\\NativeCSharp\\FactoryCorrectionInheritance\\FactoryCorrectionInheritance\\FactoryCorrectionInheritance.csproj",
       "projectName": "FactoryCorrectionInheritance",
-      "projectPath": "/Users/Tim/Documents/GitHub/FactoryCorrectionInheritance/FactoryCorrectionInheritance.csproj",
-      "packagesPath": "/Users/Tim/.nuget/packages/",
-      "outputPath": "/Users/Tim/Documents/GitHub/FactoryCorrectionInheritance/obj/",
+      "projectPath": "C:\\Users\\timmo\\Desktop\\NativeCSharp\\FactoryCorrectionInheritance\\FactoryCorrectionInheritance\\FactoryCorrectionInheritance.csproj",
+      "packagesPath": "C:\\Users\\timmo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\timmo\\Desktop\\NativeCSharp\\FactoryCorrectionInheritance\\FactoryCorrectionInheritance\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/Tim/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\timmo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -59,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

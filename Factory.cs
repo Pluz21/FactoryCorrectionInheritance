@@ -16,7 +16,7 @@ public abstract class Factory
         //public delegate OnStartProduct();                 // This is how we would declare a delegate
         //OnStartProduction onStartProd;
         public abstract event Action OnEndProduction;   
-        public abstract event Action OnVehicleProduced;
+        public abstract event Action<Vehicle> OnVehicleProduced;
         public event Action<VehicleColor> OnColorSelected = null;                           // 
         public event Action OnVehicleStockDisplayed = null;
 

@@ -21,7 +21,7 @@ namespace FactoryCorrectionInheritance
 
         public override event Action OnStartProduction = null;              // Overriding abstract event, we do this as a more secure delegate 
         public override event Action OnEndProduction = null;
-        public override event Action OnVehicleProduced = null;
+        public override event Action<Vehicle> OnVehicleProduced = null;
 
         #region Constructor
         public AirplaneFactory()
@@ -62,7 +62,8 @@ namespace FactoryCorrectionInheritance
         {
             OnStartProduction?.Invoke();                                         // This is the broadcast, the ? is an ISVALID checker. If this class gets destroyed for example
             Airplane _plane = new Airplane(templatePlane);                      // Sending the template inside the constructor
-            allVehicles.Add(_plane);                                           // Adding to our list of vehicles --> Check Factory for the abstract function            
+            allVehicles.Add(_plane);
+            OnVehicleProduced?.Invoke(_plane);// Adding to our list of vehicles --> Check Factory for the abstract function            
             OnEndProduction.Invoke();
             return _plane;
             }
