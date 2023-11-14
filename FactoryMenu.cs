@@ -16,6 +16,15 @@ namespace FactoryCorrectionInheritance
         {   
         currentFactory = _factory;
             //TODO abo menu + factory 
+            currentFactory.OnEndProduction += Console.Clear;
+            currentFactory.OnEndProduction -= ShowMenu;
+
+            currentFactory.OnEndProduction += () =>                         // LAMBA PHANTOM FUNCTION taking parameters within () 
+            {
+                Console.Clear();
+                ShowMenu();
+            };
+
         }
 
         #endregion Constructor
