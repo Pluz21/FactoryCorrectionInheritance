@@ -23,6 +23,23 @@ namespace FactoryCorrectionInheritance
         public override event Action OnEndProduction = null;
         public override event Action OnVehicleProduced = null;
 
+        #region Constructor
+        public AirplaneFactory()
+        
+        {
+            OnStartProduction += SelectColor;
+            OnColorSelected += (color) => 
+            {
+                templatePlane.Color = color; 
+                templatePlane.Engines = 1;
+                templatePlane.Passengers = 1;
+            };
+
+            templatePlane.Color = new VehicleColor();
+        }
+        #endregion Constructor
+        #region Methods
+
         public override void StartProduction()
         {
             base.StartProduction();                                                 // EXAMPLE OF OVERRIDING A NON-ABSTRACT FUNCTION this one calls CreateVehicle()
@@ -37,5 +54,6 @@ namespace FactoryCorrectionInheritance
             }
             
         }
+        #endregion Methods
     }
 
