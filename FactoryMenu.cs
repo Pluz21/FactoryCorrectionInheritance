@@ -20,10 +20,14 @@ namespace FactoryCorrectionInheritance
             currentFactory.OnEndProduction -= ShowMenu;
 
             currentFactory.OnEndProduction += () =>                         // LAMBA PHANTOM FUNCTION taking parameters within () 
+                                                                            // lamba function is created on the fly 
             {
                 Console.Clear();
                 ShowMenu();
             };
+            selection.Add(new FactoryMenuSelection("Create new vehicle", currentFactory.StartProduction));
+            //selection.Add(new FactoryMenuSelection("List all produced vehicles", currentFactory.DisplayStock));
+            
 
         }
 
