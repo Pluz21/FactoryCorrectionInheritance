@@ -33,7 +33,9 @@ namespace FactoryCorrectionInheritance
                 ShowMenu();
             };
 
-            selection.Add(new FactoryMenuSelection("Create new vehicle", currentFactory.StartProduction));
+            selection.Add(new FactoryMenuSelection("Create new airplane", currentFactory.StartProduction));
+            selection.Add(new FactoryMenuSelection("Create new car", currentFactory.StartProduction));
+           
             selection.Add(new FactoryMenuSelection("List all produced vehicles", currentFactory.DisplayStock));
             ShowMenu();
 
