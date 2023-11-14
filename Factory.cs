@@ -52,10 +52,38 @@ public abstract class Factory
         }
         protected abstract Vehicle CreateVehicle();                                         // CAN BE PROTECTED SINCE WE ONLY NEED TO CALL STARTPRODUCTION()
                                                                                             // THIS FUNCTION RETURNS THE VEHICLE
-        protected void SetColor()
+        protected void SelectColor()
         {
             string[] _colors = Enum.GetNames(typeof(VehicleColor));                         // We have to specify TYPEOF before our actual Enum  
             // =! syntax Enum.GetNames<VehicleColor>();                                    //  We declared this Enum in our Vehicle class
+            Console.WriteLine("Select the vehicle color!");
+            int _length = _colors.Length;
+            for (int i = 0; i < _length; i++)
+            {
+                string _color = _colors[i];                                                 // We retrieve each individual color of our Enum
+                Console.WriteLine("{0} - {1}",i+1,_color);                                  // Starting our list from 1 (i+1)
+
+
+            }                                                                               // TryParse takes 2 arguments, the string, and an out int 
+            string _input = Console.ReadLine();                                             // We want to convert the string to number
+            bool _validInput = int.TryParse(_input,out int _result);                        // tryparse will return a signed. So it can be negative it will
+
+                                                                                            // int _result;             OTHER SYNTAX
+                                                                                            // bool _validInput = int.TryParse(_input,out _result);                          
+                                                                                            // tryparse will return a signed. So it can be negative it will
+            if (!_validInput)                                                               // convert it to positive
+            {
+                Console.WriteLine("Not a valid entry, retry");
+                Console.Read();
+                Console.Clear();
+                SelectColor();
+                return;                                                                     // return to avoid going further in function
+            }
+            _result = _result < 1 ? 1 : _result > _length ? _length : _result;              // Clamping our _result to lower and higher 
+            VehicleColor _selection = (VehicleColor)(_result-1);                            //Syntax to cast to VehicleColor, -1 because we started from 1 in choices
+                                                                                            // _selection is the choice of user, so we cast the choice to
+                                                                                            // our Enum. So now we have the color selection in our Enum
+
             #endregion Methods
 
         }
