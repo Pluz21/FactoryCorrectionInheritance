@@ -18,12 +18,12 @@ namespace FactoryCorrectionInheritance
         public VehicleColor Color { get; protected set; } = VehicleColor.Black;   // Only access itself
                                                                                   // if we add STATIC here, we will only have ONE VehicleColor applying to ALL our vehicles.
         #region Constructor
-        public Vehicle()                            // Constructor with 
+        public Vehicle()                            // Constructor  default
         
         {
             Color = VehicleColor.Black;
         } 
-        public Vehicle(VehicleColor _color) 
+        public Vehicle(VehicleColor _color)                 // Constructor with template
         
         {
             Color = _color;

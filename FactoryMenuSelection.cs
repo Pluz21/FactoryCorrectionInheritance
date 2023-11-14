@@ -11,13 +11,19 @@ namespace FactoryCorrectionInheritance
     {
         public string Label {get; private set;  } = "Label";                // Creating a label we can use in the FactoryMenu 
         Action callback = null;                                             // Action is a CSharp variable type we can use 
-
-        public FactoryMenuSelection(string _label, Action _callback)
+        #region Constructor
+        public FactoryMenuSelection(string _label, Action _callback) 
         { 
             Label = _label;
             callback = _callback;   
         }
+        #endregion Constructor
         public void Execute() => callback?.Invoke();                            // Broadcasting the action 
+                                                                                // DIFFERENT SYNTAX : 
+                                                                                //public void Execute()
+                                                                                //{
+                                                                                //callback?.Invoke()
+                                                                                //};
 
     }
 }

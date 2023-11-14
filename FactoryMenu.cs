@@ -49,7 +49,7 @@ namespace FactoryCorrectionInheritance
             currentFactory = allFactories.Count > 0 ? allFactories[currentFactoryIndex] : null;   // looking for first valid factory
             if (currentFactory == null) return;
             
-            currentFactory.OnEndProduction += ResetMenu;
+            currentFactory.OnEndProduction += ResetMenu;  
             currentFactory.OnEndProduction -= ResetMenu;
 
             selection.Add(new FactoryMenuSelection("Create new airplane", currentFactory.StartProduction));

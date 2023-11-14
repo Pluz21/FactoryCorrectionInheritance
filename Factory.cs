@@ -12,17 +12,17 @@ public abstract class Factory
     {
         #region fieldsAndProperties
 
-        public abstract event Action OnStartProduction;   // Declaring event    
+        public abstract event Action OnStartProduction;   // Declaring events
         //public delegate OnStartProduct();                 // This is how we would declare a delegate
         //OnStartProduction onStartProd;
-        public abstract event Action OnEndProduction;   
-        public abstract event Action<Vehicle> OnVehicleProduced;
-        public event Action<VehicleColor> OnColorSelected = null;                           // 
+        public abstract event Action OnEndProduction;           // Event called after producing
+        public abstract event Action<Vehicle> OnVehicleProduced;        // EXTRA event not used right now but it is good to have extra events here and there for 
+        public event Action<VehicleColor> OnColorSelected = null;      // later use 
         public event Action OnVehicleStockDisplayed = null;
 
         protected List<Vehicle> allVehicles = new List<Vehicle>();                          // DECLARING DYNAMIC ,ITS LIKE A TARRAY
         public Vehicle this[int _index] => allVehicles[_index];                             // ACCESSOR TO GET VEHICLE IN INDEX 
-        public string Name { get; private set; } = "Factorioso";                             // Instead of having to do vehicle.allVehicles.[index] we will be able to call 
+        public string Name { get; private set; } = "FactorioSosoManess";                             // Instead of having to do vehicle.allVehicles.[index] we will be able to call 
                                                                                             // vehicle.[index] 
                                                                                             //this refers to Factory class
         #endregion fieldsAndProperties
@@ -40,9 +40,9 @@ public abstract class Factory
 
         #endregion Constructor
         #region Methods
-        protected  void Stop()
+        protected void Stop()
         {
-            Console.WriteLine("Switching to the next factory");
+            Console.WriteLine("Switching to the next factory");                             // NOT USED NOW but good to have if needed later. 
         }
         public virtual void StartProduction()                                               // VIRTUAL AND ALREADY CALLING AN ABSTRACT FUNCTION
         {
@@ -93,7 +93,7 @@ public abstract class Factory
             #endregion Methods
 
         }
-        public void DisplayStock()
+        public void DisplayStock()                                                              // Displaying 
         {
             int _size = allVehicles.Count;
             for (int i = 0; i < _size; i++)
