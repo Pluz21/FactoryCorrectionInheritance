@@ -8,10 +8,11 @@ namespace FactoryCorrectionInheritance
 {
     public class CarFactory : Factory
     {
-        public struct TemplateCarModel
+        public struct TemplateCarModel              // HAVE TO BE PUBLIC IN CSHARP
         { 
             public VehicleColor Color;
             public int Passengers;
+            public int Doors;
         }
         TemplateCarModel carTemplate = new TemplateCarModel();
 
@@ -30,6 +31,11 @@ namespace FactoryCorrectionInheritance
                 ($"Select the number of passengers : [{Car.MIN_PASSENGERS} - {Car.MAX_PASSENGERS}]",
                 Car.MIN_PASSENGERS,Car.MAX_PASSENGERS,"Produced a new car",(passengers) => carTemplate.Passengers = passengers
                 );
+                SelectSettings
+               ($"Select the number of doors : [{Car.MIN_DOORS} - {Car.MAX_DOORS}]",
+               Car.MIN_DOORS, Car.MAX_DOORS, "Produced a new car", (doors) => carTemplate.Doors = doors
+               );
+
 
 
             };
