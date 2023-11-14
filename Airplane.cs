@@ -25,7 +25,7 @@ namespace FactoryCorrectionInheritance
             Color = _color;
         }
 
-        public Airplane(AirplaneFactory.TempPlaneModel _model)                          // ABLE TO ACCESS WITH NAME SPACE
+        public Airplane(AirplaneFactory.TemplatePlaneModel _model)                          // ABLE TO ACCESS WITH NAME SPACE
         {
             Color = _model.Color;
             Engines = _model.Engines;

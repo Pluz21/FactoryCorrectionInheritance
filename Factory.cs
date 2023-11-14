@@ -11,9 +11,11 @@ public abstract class Factory
     {
         #region fieldsAndProperties
 
-        public  event Action OnStartProduction;   // Declaring event    
-        public  event Action OnEndProduction;   
-        public  event Action OnVehicleProduced;
+        public abstract event Action OnStartProduction;   // Declaring event    
+        //public delegate OnStartProduct();                 // This is how we would declare a delegate
+        //OnStartProduction onStartProd;
+        public abstract event Action OnEndProduction;   
+        public abstract event Action OnVehicleProduced;
 
         protected List<Vehicle> allVehicles = new List<Vehicle>();                          // DECLARING DYNAMIC ,ITS LIKE A TARRAY
         public Vehicle this[int _index] => allVehicles[_index];                             // ACCESSOR TO GET VEHICLE IN INDEX 
@@ -49,10 +51,14 @@ public abstract class Factory
         
         }
         protected abstract Vehicle CreateVehicle();                                         // CAN BE PROTECTED SINCE WE ONLY NEED TO CALL STARTPRODUCTION()
-       
+                                                                                            // THIS FUNCTION RETURNS THE VEHICLE
+        protected void SetColor()
+        {
+            string[] _colors = Enum.GetNames(typeof(VehicleColor));                         // We have to specify TYPEOF before our actual Enum  
+            // =! syntax Enum.GetNames<VehicleColor>();                                    //  We declared this Enum in our Vehicle class
+            #endregion Methods
 
-        #endregion Methods
-
-    }
+        }
+    }   
 }
 
