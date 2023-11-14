@@ -28,7 +28,7 @@ namespace FactoryCorrectionInheritance
 
             currentFactory.OnVehicleStockDisplayed += () =>
             {
-                Console.Read();
+                Console.ReadLine();
                 Console.Clear();
                 ShowMenu();
             };
@@ -44,6 +44,7 @@ namespace FactoryCorrectionInheritance
         #region Methods
         void ShowMenu()
         {
+            Console.Clear();
             int _selectionCount = selection.Count;
             for (int i = 0; i < _selectionCount; i++) 
             {
