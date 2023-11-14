@@ -117,7 +117,6 @@ public abstract class Factory
 
             _callback?.Invoke(_result);
 
-        
         }
     }   
 }

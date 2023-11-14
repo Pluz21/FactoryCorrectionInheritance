@@ -69,6 +69,7 @@ namespace FactoryCorrectionInheritance
             }
             
         }
+
         #endregion Methods
     }
 

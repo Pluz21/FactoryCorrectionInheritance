@@ -44,7 +44,7 @@ public class Car : Vehicle
         public override void StopEngine() => Console.WriteLine("Start Car engine");
         public override string ToString()                           // RETURN TYPE STRING TO -  NEEDS A RETURN
         {
-            return $"You have just produced a {Color} car. It has a capacity of {Passengers} passengers.";
+            return $"You have just produced a {Color} car. It has {Doors} doors and a capacity of {Passengers} passengers.";
         }
 
         #endregion Methods
