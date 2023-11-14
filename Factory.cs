@@ -18,6 +18,7 @@ public abstract class Factory
         public abstract event Action OnEndProduction;   
         public abstract event Action OnVehicleProduced;
         public event Action<VehicleColor> OnColorSelected = null;                           // 
+        public event Action OnVehicleStockDisplayed = null;
 
         protected List<Vehicle> allVehicles = new List<Vehicle>();                          // DECLARING DYNAMIC ,ITS LIKE A TARRAY
         public Vehicle this[int _index] => allVehicles[_index];                             // ACCESSOR TO GET VEHICLE IN INDEX 
@@ -91,6 +92,15 @@ public abstract class Factory
 
             #endregion Methods
 
+        }
+        public void DisplayStock()
+        {
+            int _size = allVehicles.Count;
+            for (int i = 0; i < _size; i++)
+            {
+                Console.WriteLine(allVehicles[i]);
+            }
+            OnVehicleStockDisplayed?.Invoke();
         }
     }   
 }

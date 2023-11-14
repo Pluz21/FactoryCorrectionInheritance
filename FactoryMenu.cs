@@ -25,6 +25,14 @@ namespace FactoryCorrectionInheritance
                 Console.Clear();
                 ShowMenu();
             };
+
+            currentFactory.OnVehicleStockDisplayed += () =>
+            {
+                Console.Read();
+                Console.Clear();
+                ShowMenu();
+            };
+
             selection.Add(new FactoryMenuSelection("Create new vehicle", currentFactory.StartProduction));
             //selection.Add(new FactoryMenuSelection("List all produced vehicles", currentFactory.DisplayStock));
             
