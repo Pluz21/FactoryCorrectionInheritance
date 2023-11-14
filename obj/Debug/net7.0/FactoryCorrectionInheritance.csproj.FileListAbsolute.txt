@@ -27,17 +27,3 @@ C:/Users/timmo/Desktop/NativeCSharp/FactoryCorrectionInheritance/FactoryCorrecti
 /Users/Tim/Documents/GitHub/FactoryCorrectionInheritance/obj/Debug/net7.0/refint/FactoryCorrectionInheritance.dll
 /Users/Tim/Documents/GitHub/FactoryCorrectionInheritance/obj/Debug/net7.0/FactoryCorrectionInheritance.genruntimeconfig.cache
 /Users/Tim/Documents/GitHub/FactoryCorrectionInheritance/obj/Debug/net7.0/ref/FactoryCorrectionInheritance.dll
-C:\Users\timmo\Desktop\NativeCSharp\FactoryCorrectionInheritance\FactoryCorrectionInheritance\bin\Debug\net7.0\FactoryCorrectionInheritance.exe
-C:\Users\timmo\Desktop\NativeCSharp\FactoryCorrectionInheritance\FactoryCorrectionInheritance\bin\Debug\net7.0\FactoryCorrectionInheritance.deps.json
-C:\Users\timmo\Desktop\NativeCSharp\FactoryCorrectionInheritance\FactoryCorrectionInheritance\bin\Debug\net7.0\FactoryCorrectionInheritance.runtimeconfig.json
-C:\Users\timmo\Desktop\NativeCSharp\FactoryCorrectionInheritance\FactoryCorrectionInheritance\bin\Debug\net7.0\FactoryCorrectionInheritance.dll
-C:\Users\timmo\Desktop\NativeCSharp\FactoryCorrectionInheritance\FactoryCorrectionInheritance\bin\Debug\net7.0\FactoryCorrectionInheritance.pdb
-C:\Users\timmo\Desktop\NativeCSharp\FactoryCorrectionInheritance\FactoryCorrectionInheritance\obj\Debug\net7.0\FactoryCorrectionInheritance.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\timmo\Desktop\NativeCSharp\FactoryCorrectionInheritance\FactoryCorrectionInheritance\obj\Debug\net7.0\FactoryCorrectionInheritance.AssemblyInfoInputs.cache
-C:\Users\timmo\Desktop\NativeCSharp\FactoryCorrectionInheritance\FactoryCorrectionInheritance\obj\Debug\net7.0\FactoryCorrectionInheritance.AssemblyInfo.cs
-C:\Users\timmo\Desktop\NativeCSharp\FactoryCorrectionInheritance\FactoryCorrectionInheritance\obj\Debug\net7.0\FactoryCorrectionInheritance.csproj.CoreCompileInputs.cache
-C:\Users\timmo\Desktop\NativeCSharp\FactoryCorrectionInheritance\FactoryCorrectionInheritance\obj\Debug\net7.0\FactoryCorrectionInheritance.dll
-C:\Users\timmo\Desktop\NativeCSharp\FactoryCorrectionInheritance\FactoryCorrectionInheritance\obj\Debug\net7.0\refint\FactoryCorrectionInheritance.dll
-C:\Users\timmo\Desktop\NativeCSharp\FactoryCorrectionInheritance\FactoryCorrectionInheritance\obj\Debug\net7.0\FactoryCorrectionInheritance.pdb
-C:\Users\timmo\Desktop\NativeCSharp\FactoryCorrectionInheritance\FactoryCorrectionInheritance\obj\Debug\net7.0\FactoryCorrectionInheritance.genruntimeconfig.cache
-C:\Users\timmo\Desktop\NativeCSharp\FactoryCorrectionInheritance\FactoryCorrectionInheritance\obj\Debug\net7.0\ref\FactoryCorrectionInheritance.dll

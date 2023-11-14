@@ -10,8 +10,9 @@ class Program
      
         AirplaneFactory _airplaneFact = new AirplaneFactory();
         CarFactory _carFact = new CarFactory();
-        FactoryMenu airplaneFactoryMenu = new FactoryMenu(_airplaneFact);
+       // FactoryMenu airplaneFactoryMenu = new FactoryMenu(_airplaneFact);
         FactoryMenu carFactoryMenu = new FactoryMenu(_carFact);
+        Console.Read();
         
     
     }
