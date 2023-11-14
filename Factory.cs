@@ -16,6 +16,7 @@ public abstract class Factory
         //OnStartProduction onStartProd;
         public abstract event Action OnEndProduction;   
         public abstract event Action OnVehicleProduced;
+        public event Action<VehicleColor> OnColorSelected = null;                           // 
 
         protected List<Vehicle> allVehicles = new List<Vehicle>();                          // DECLARING DYNAMIC ,ITS LIKE A TARRAY
         public Vehicle this[int _index] => allVehicles[_index];                             // ACCESSOR TO GET VEHICLE IN INDEX 
@@ -79,10 +80,10 @@ public abstract class Factory
                 SelectColor();
                 return;                                                                     // return to avoid going further in function
             }
-            _result = _result < 1 ? 1 : _result > _length ? _length : _result;              // Clamping our _result to lower and higher 
+            _result = _result < 1 ? 1 : _result > _length ? _length : _result;               // Clamping our _result to lower and higher 
             VehicleColor _selection = (VehicleColor)(_result-1);                            //Syntax to cast to VehicleColor, -1 because we started from 1 in choices
-                                                                                            // _selection is the choice of user, so we cast the choice to
-                                                                                            // our Enum. So now we have the color selection in our Enum
+            OnColorSelected?.Invoke(_selection);                                           // _selection is the choice of user, so we cast the choice to
+                                                                                          // our Enum. So now we have the color selection in our Enum
 
             #endregion Methods
 
